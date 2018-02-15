@@ -3,11 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <title>Episode II: Attack of the Clones - Simple Star Wars Site</title>
+      <link rel="stylesheet" href="/static/css/bootstrap.css">
+    <link rel="stylesheet" href="/static/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
+
+    <div class="container">
+      <h3>Tabs</h3>
+      <ul class="nav nav-tabs">
+        <li><a href="/">Home</a></li>
+        <li><a href="/">Starswars Movies</a></li>
+        <li><a href="../add-movie/">Add movie</a></li>
+      </ul>
+      <br>
+    </div>
+
+<div class="container">
+ <div class="row">
   <article>
+    
+    <div class="col-sm-3">
+      <img class="img-responsive" src="/media/images/starwars_episode_ii.png" alt="Episode II: Attack of the Clones">
+    </div>
+    <div class="col-sm-9">
     <h1>Episode II: Attack of the Clones</h1>
-    <img src="/media/images/starwars_episode_ii.png" alt="Episode II: Attack of the Clones">
     <h2>Opening crawl</h2>
     <blockquote>
       <p>There is unrest in the Galactic Senate. Several thousand solar systems have declared their intentions to leave the Republic.</p>
@@ -15,7 +37,15 @@
       <p>Senator Amidala, the former Queen of Naboo, is returning to the Galactic Senate to vote on the critical issue of creating an ARMY OF THE REPUBLIC to assist the overwhelmed Jedi...</p>
     </blockquote>
     <h2>General information</h2>
-    <table>
+    <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#home">Attribution information</a></li>
+    <li><a data-toggle="tab" href="#menu1">Production information</a></li>
+    <li><a data-toggle="tab" href="#menu2">Chronological information</a></li>
+  </ul>
+
+  <div class="tab-content">
+    <div id="home" class="tab-pane fade in active">
+        <table class="table">
       <thead>
         <tr>
           <th>Attribution information</th>
@@ -66,7 +96,9 @@
         </tr>
       </tbody>
     </table>
-    <table>
+    </div>
+    <div id="menu1" class="tab-pane fade">
+      <table class="table table-striped">
       <thead>
         <tr>
           <th>Production information</th>
@@ -95,7 +127,9 @@
         </tr>
       </tbody>
     </table>
-    <table>
+    </div>
+    <div id="menu2" class="tab-pane fade">
+           <table class="table table-hover">
       <thead>
         <tr>
           <th>Chronological information</th>
@@ -116,6 +150,13 @@
         </tr>
       </tbody>
     </table>
+    </div>
+  </div> 
+  </div>
   </article>
+  </div>
+</div>
+  <script src="/static/js/jquery-1.12.1.js"></script>
+  <script src="/static/js/bootstrap.js"></script>
 </body>
 </html>
